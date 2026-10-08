@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conditions d'utilisation ShortFactory</title>
+<style>
+  /* Document légal : colonne unique, hiérarchie typographique, zéro ornement. */
+  :root {
+    --fond: #fbfaf8;
+    --papier: #ffffff;
+    --encre: #1c1f24;
+    --encre-douce: #5b626d;
+    --trait: #e2e0da;
+    --accent: #3c5a7a;
+    --surligne: #f3f1ea;
+    --titre: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+    --corps: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+    --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --fond: #131519;
+      --papier: #181b20;
+      --encre: #e8e6e1;
+      --encre-douce: #9aa0ab;
+      --trait: #2a2e35;
+      --accent: #8fb3d9;
+      --surligne: #1f232a;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --fond: #131519;
+    --papier: #181b20;
+    --encre: #e8e6e1;
+    --encre-douce: #9aa0ab;
+    --trait: #2a2e35;
+    --accent: #8fb3d9;
+    --surligne: #1f232a;
+    color-scheme: dark;
+  }
+
+  body {
+    background: var(--fond);
+    color: var(--encre);
+    font-family: var(--corps);
+    font-size: 17px;
+    line-height: 1.65;
+    padding: 0 20px;
+  }
+
+  .feuille {
+    max-width: 44rem;
+    margin: 0 auto;
+    background: var(--papier);
+    border: 1px solid var(--trait);
+    border-radius: 4px;
+    padding-block: clamp(32px, 6vw, 56px);
+    padding-inline: clamp(20px, 5vw, 56px);
+    margin-block: clamp(20px, 5vw, 48px);
+  }
+
+  .entete { border-bottom: 2px solid var(--encre); padding-bottom: 20px; margin-bottom: 36px; }
+  .eyebrow {
+    font-family: var(--titre);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 10px;
+  }
+  h1 {
+    font-family: var(--titre);
+    font-size: clamp(27px, 5vw, 36px);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -.015em;
+    margin: 0 0 12px;
+    text-wrap: balance;
+  }
+  .meta {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: var(--encre-douce);
+    margin: 0;
+  }
+
+  h2 {
+    font-family: var(--titre);
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: -.01em;
+    margin: 38px 0 12px;
+    padding-top: 18px;
+    border-top: 1px solid var(--trait);
+    text-wrap: balance;
+  }
+  h2 .num {
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--accent);
+    margin-right: 10px;
+  }
+
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 7px; }
+  strong { font-weight: 600; }
+  code {
+    font-family: var(--mono);
+    font-size: .88em;
+    background: var(--surligne);
+    padding: 1px 5px;
+    border-radius: 3px;
+  }
+
+  .encadre {
+    background: var(--surligne);
+    border-left: 3px solid var(--accent);
+    padding: 16px 20px;
+    margin: 20px 0;
+    border-radius: 0 4px 4px 0;
+  }
+  .encadre p:last-child { margin-bottom: 0; }
+
+  .pied {
+    margin-top: 44px;
+    padding-top: 20px;
+    border-top: 1px solid var(--trait);
+    font-family: var(--titre);
+    font-size: 13.5px;
+    color: var(--encre-douce);
+  }
+  .pied p { margin-bottom: 8px; }
+</style>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+</head>
+<body>
+<article class="feuille">
+
+  <header class="entete">
+    <p class="eyebrow">ShortFactory</p>
+    <h1>Conditions d'utilisation</h1>
+    <p class="meta">Version 1.0 — 8 octobre 2026</p>
+  </header>
+
+  <h2><span class="num">1</span>Objet</h2>
+  <p>
+    ShortFactory est une application de bureau qui génère des vidéos verticales
+    courtes — récit, narration vocale, images d'arrière-plan, sous-titres — et
+    permet de les transmettre au compte TikTok de son utilisateur via l'API
+    officielle de publication de contenu.
+  </p>
+  <p>
+    L'application s'exécute entièrement sur l'ordinateur de l'utilisateur. Elle
+    ne repose sur aucun serveur exploité par l'éditeur, et aucune fonctionnalité
+    ne nécessite de compte auprès de l'éditeur.
+  </p>
+
+  <h2><span class="num">2</span>Licence d'utilisation</h2>
+  <p>
+    L'application est fournie gratuitement, pour un usage personnel. L'utilisateur
+    est libre de l'installer, de l'exécuter, d'en modifier le code source et d'en
+    conserver les productions.
+  </p>
+
+  <h2><span class="num">3</span>Responsabilité éditoriale</h2>
+  <p>
+    Les vidéos produites par ShortFactory sont générées automatiquement à partir
+    de modèles narratifs et de services de génération tiers. <strong>L'utilisateur
+    demeure seul responsable de tout contenu qu'il choisit de publier.</strong>
+  </p>
+  <p>Il lui appartient notamment :</p>
+  <ul>
+    <li>de relire chaque vidéo avant publication ;</li>
+    <li>de s'assurer qu'elle respecte les règles communautaires de TikTok,
+        en particulier celles portant sur le contenu généré par intelligence
+        artificielle et sur le contenu non original ;</li>
+    <li>de vérifier qu'il détient les droits sur toute musique ou tout élément
+        qu'il ajoute lui-même ;</li>
+    <li>de signaler le caractère généré du contenu lorsque la plateforme
+        l'exige.</li>
+  </ul>
+
+  <div class="encadre">
+    <p>
+      Le mode de publication par défaut dépose les vidéos dans les brouillons du
+      compte TikTok plutôt que de les publier. Ce choix est délibéré : il laisse
+      à l'utilisateur la possibilité de contrôler chaque vidéo avant diffusion.
+    </p>
+  </div>
+
+  <h2><span class="num">4</span>Services tiers</h2>
+  <p>
+    Selon les réglages retenus, l'application peut solliciter des services
+    extérieurs : un service de synthèse vocale pour la narration, un service de
+    génération d'images pour les arrière-plans, et l'API de TikTok pour la
+    transmission des vidéos.
+  </p>
+  <p>
+    Ces services sont soumis à leurs propres conditions, sur lesquelles l'éditeur
+    de ShortFactory n'exerce aucun contrôle. Leur disponibilité n'est pas
+    garantie. L'application fonctionne en mode dégradé — arrière-plans calculés
+    localement — lorsque la génération d'images est indisponible.
+  </p>
+
+  <h2><span class="num">5</span>Absence de garantie</h2>
+  <p>
+    L'application est fournie « en l'état », sans garantie d'aucune sorte,
+    expresse ou implicite, notamment quant à sa qualité marchande, son adéquation
+    à un usage particulier ou son fonctionnement ininterrompu.
+  </p>
+  <p>
+    L'éditeur ne saurait être tenu responsable des conséquences de l'utilisation
+    de l'application, y compris la suspension, la restriction de portée ou la
+    suppression d'un compte TikTok résultant du contenu publié par l'utilisateur.
+  </p>
+
+  <h2><span class="num">6</span>Accès au compte TikTok</h2>
+  <p>
+    La liaison d'un compte TikTok s'effectue par le protocole OAuth officiel de
+    la plateforme. L'utilisateur accorde explicitement les autorisations
+    demandées, et peut les révoquer à tout moment depuis les réglages de sécurité
+    de son compte TikTok, ou en cliquant sur <code>Délier</code> dans
+    l'application.
+  </p>
+  <p>
+    Les jetons d'accès sont conservés uniquement sur l'ordinateur de
+    l'utilisateur. Ils ne transitent par aucun serveur de l'éditeur.
+  </p>
+
+  <h2><span class="num">7</span>Modification</h2>
+  <p>
+    Les présentes conditions peuvent être mises à jour. La version en vigueur est
+    celle publiée à cette adresse, datée en tête de document.
+  </p>
+
+  <div class="pied">
+    <p>Pour toute question relative à ces conditions, contacter l'éditeur de
+       l'application via le compte développeur TikTok associé.</p>
+    <p>Voir également la <a href="confidentialite.html">politique de confidentialité</a>.</p>
+  </div>
+
+</article>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ShortFactory</title>
+<style>
+  /* Page de présentation : en-tête sobre, ce que fait l'app, puis les liens légaux. */
+  :root {
+    --fond: #fbfaf8;
+    --papier: #ffffff;
+    --encre: #1c1f24;
+    --encre-douce: #5b626d;
+    --trait: #e2e0da;
+    --accent: #3c5a7a;
+    --surligne: #f3f1ea;
+    --titre: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+    --corps: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+    --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --fond: #131519; --papier: #181b20; --encre: #e8e6e1; --encre-douce: #9aa0ab;
+      --trait: #2a2e35; --accent: #8fb3d9; --surligne: #1f232a; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --fond: #131519; --papier: #181b20; --encre: #e8e6e1; --encre-douce: #9aa0ab;
+    --trait: #2a2e35; --accent: #8fb3d9; --surligne: #1f232a; color-scheme: dark;
+  }
+
+  body {
+    background: var(--fond); color: var(--encre);
+    font-family: var(--corps); font-size: 17px; line-height: 1.65;
+    padding: 0 20px;
+  }
+
+  .feuille {
+    max-width: 46rem; margin: 0 auto;
+    background: var(--papier); border: 1px solid var(--trait); border-radius: 4px;
+    padding-block: clamp(32px, 6vw, 56px);
+    padding-inline: clamp(20px, 5vw, 56px);
+    margin-block: clamp(20px, 5vw, 48px);
+  }
+
+  .entete { border-bottom: 2px solid var(--encre); padding-bottom: 22px; margin-bottom: 32px; }
+  .eyebrow {
+    font-family: var(--titre); font-size: 11px; font-weight: 600;
+    letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin: 0 0 10px;
+  }
+  h1 {
+    font-family: var(--titre); font-size: clamp(30px, 6vw, 42px); font-weight: 600;
+    line-height: 1.15; letter-spacing: -.02em; margin: 0 0 14px; text-wrap: balance;
+  }
+  .chapeau { font-size: 18.5px; color: var(--encre-douce); margin: 0; max-width: 34rem; }
+
+  h2 {
+    font-family: var(--titre); font-size: 19px; font-weight: 600; letter-spacing: -.01em;
+    margin: 36px 0 14px; padding-top: 18px; border-top: 1px solid var(--trait);
+    text-wrap: balance;
+  }
+  p { margin: 0 0 14px; }
+
+  .etapes { display: grid; gap: 14px; margin: 0 0 8px; padding: 0; list-style: none; }
+  .etapes li {
+    display: grid; grid-template-columns: 2rem 1fr; gap: 14px;
+    align-items: start; min-width: 0;
+  }
+  .etapes .n {
+    font-family: var(--mono); font-size: 12.5px; font-weight: 500; color: var(--accent);
+    padding-top: 5px; font-variant-numeric: tabular-nums;
+  }
+  .etapes b { font-family: var(--titre); font-size: 15.5px; font-weight: 600; display: block; }
+  .etapes span { font-size: 16px; color: var(--encre-douce); }
+
+  .faits { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 1px;
+           background: var(--trait); border: 1px solid var(--trait); border-radius: 4px;
+           overflow: hidden; margin: 22px 0; }
+  .faits div { background: var(--papier); padding: 16px 18px; min-width: 0; }
+  .faits dt {
+    font-family: var(--titre); font-size: 11px; font-weight: 600; letter-spacing: .08em;
+    text-transform: uppercase; color: var(--encre-douce); margin-bottom: 5px;
+  }
+  .faits dd { margin: 0; font-family: var(--titre); font-size: 15px; }
+
+  .encadre {
+    background: var(--surligne); border-left: 3px solid var(--accent);
+    padding: 16px 20px; margin: 20px 0; border-radius: 0 4px 4px 0;
+  }
+  .encadre p:last-child { margin-bottom: 0; }
+
+  .pied {
+    margin-top: 42px; padding-top: 20px; border-top: 1px solid var(--trait);
+    font-family: var(--titre); font-size: 14px; color: var(--encre-douce);
+  }
+  .pied p { margin-bottom: 8px; }
+  a { color: var(--accent); }
+</style>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Serif:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+</head>
+<body>
+<article class="feuille">
+
+  <header class="entete">
+    <p class="eyebrow">Application de bureau</p>
+    <h1>ShortFactory</h1>
+    <p class="chapeau">
+      Écrit des histoires courtes, les met en voix et en images, et les dépose
+      sur TikTok. Tout est produit sur la machine de l'utilisateur.
+    </p>
+  </header>
+
+  <h2>Ce que fait l'application</h2>
+  <ol class="etapes">
+    <li><span class="n">01</span><span><b>Le récit</b>Un personnage, un décor, une
+      structure narrative en quatorze temps. Environ une minute de narration.</span></li>
+    <li><span class="n">02</span><span><b>La voix</b>Synthèse vocale française.
+      Elle fournit l'instant exact de chaque mot prononcé.</span></li>
+    <li><span class="n">03</span><span><b>Les images</b>Un plan par scène, avec une
+      description de personnage constante d'un plan à l'autre.</span></li>
+    <li><span class="n">04</span><span><b>Les sous-titres</b>Le mot prononcé est
+      surligné à l'instant où il est dit, grâce aux positions fournies par la voix.</span></li>
+    <li><span class="n">05</span><span><b>Le montage</b>Zoom lent sur chaque plan,
+      fondus enchaînés, mixage et normalisation du volume.</span></li>
+    <li><span class="n">06</span><span><b>Le dépôt</b>Transmission au compte TikTok
+      de l'utilisateur via l'API officielle de publication.</span></li>
+  </ol>
+
+  <h2>Caractéristiques</h2>
+  <dl class="faits">
+    <div><dt>Plateforme</dt><dd>Windows</dd></div>
+    <div><dt>Format produit</dt><dd>Vertical, 1080 × 1920</dd></div>
+    <div><dt>Durée type</dt><dd>Environ 65 secondes</dd></div>
+    <div><dt>Serveur</dt><dd>Aucun</dd></div>
+    <div><dt>Compte requis</dt><dd>Aucun, hors TikTok</dd></div>
+    <div><dt>Collecte de données</dt><dd>Aucune</dd></div>
+  </dl>
+
+  <h2>Publication</h2>
+  <p>
+    Le mode par défaut dépose chaque vidéo dans les brouillons du compte TikTok
+    plutôt que de la publier. L'utilisateur relit, puis valide depuis
+    l'application mobile.
+  </p>
+
+  <div class="encadre">
+    <p>
+      Ce choix est délibéré. Les règles de TikTok sur le contenu non original
+      visent précisément les chaînes qui publient en volume sans relecture, et
+      une étape de validation humaine évite qu'une vidéo ratée atteigne
+      l'audience.
+    </p>
+  </div>
+
+  <h2>Confidentialité</h2>
+  <p>
+    L'application ne comporte ni télémétrie, ni analytique, ni compte utilisateur.
+    Les réglages et les jetons d'accès TikTok restent sur le disque de
+    l'utilisateur. L'interface est servie localement, sur l'adresse de bouclage,
+    et n'est accessible ni depuis le réseau local ni depuis Internet.
+  </p>
+
+  <div class="pied">
+    <p>Documents de référence : <a href="conditions.html">conditions d'utilisation</a> et <a href="confidentialite.html">politique de confidentialité</a>.</p>
+    <p>Version 1.0 — 8 octobre 2026</p>
+  </div>
+
+</article>
+</body>
+</html>

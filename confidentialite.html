@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Politique de confidentialité ShortFactory</title>
+<style>
+  /* Document légal : colonne unique, hiérarchie typographique, zéro ornement. */
+  :root {
+    --fond: #fbfaf8;
+    --papier: #ffffff;
+    --encre: #1c1f24;
+    --encre-douce: #5b626d;
+    --trait: #e2e0da;
+    --accent: #3c5a7a;
+    --surligne: #f3f1ea;
+    --titre: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+    --corps: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+    --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --fond: #131519;
+      --papier: #181b20;
+      --encre: #e8e6e1;
+      --encre-douce: #9aa0ab;
+      --trait: #2a2e35;
+      --accent: #8fb3d9;
+      --surligne: #1f232a;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --fond: #131519;
+    --papier: #181b20;
+    --encre: #e8e6e1;
+    --encre-douce: #9aa0ab;
+    --trait: #2a2e35;
+    --accent: #8fb3d9;
+    --surligne: #1f232a;
+    color-scheme: dark;
+  }
+
+  body {
+    background: var(--fond);
+    color: var(--encre);
+    font-family: var(--corps);
+    font-size: 17px;
+    line-height: 1.65;
+    padding: 0 20px;
+  }
+
+  .feuille {
+    max-width: 44rem;
+    margin: 0 auto;
+    background: var(--papier);
+    border: 1px solid var(--trait);
+    border-radius: 4px;
+    padding-block: clamp(32px, 6vw, 56px);
+    padding-inline: clamp(20px, 5vw, 56px);
+    margin-block: clamp(20px, 5vw, 48px);
+  }
+
+  .entete { border-bottom: 2px solid var(--encre); padding-bottom: 20px; margin-bottom: 36px; }
+  .eyebrow {
+    font-family: var(--titre);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 10px;
+  }
+  h1 {
+    font-family: var(--titre);
+    font-size: clamp(27px, 5vw, 36px);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -.015em;
+    margin: 0 0 12px;
+    text-wrap: balance;
+  }
+  .meta { font-family: var(--mono); font-size: 12.5px; color: var(--encre-douce); margin: 0; }
+
+  h2 {
+    font-family: var(--titre);
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: -.01em;
+    margin: 38px 0 12px;
+    padding-top: 18px;
+    border-top: 1px solid var(--trait);
+    text-wrap: balance;
+  }
+  h2 .num {
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--accent);
+    margin-right: 10px;
+  }
+
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 7px; }
+  strong { font-weight: 600; }
+  code {
+    font-family: var(--mono);
+    font-size: .88em;
+    background: var(--surligne);
+    padding: 1px 5px;
+    border-radius: 3px;
+  }
+
+  .resume {
+    background: var(--surligne);
+    border-left: 3px solid var(--accent);
+    padding: 18px 22px;
+    margin: 0 0 28px;
+    border-radius: 0 4px 4px 0;
+  }
+  .resume p { margin-bottom: 0; font-size: 16px; }
+
+  .tableau { overflow-x: auto; margin: 18px 0; }
+  table { border-collapse: collapse; width: 100%; font-family: var(--titre); font-size: 14.5px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--trait); vertical-align: top; }
+  th {
+    font-weight: 600;
+    font-size: 11.5px;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    color: var(--encre-douce);
+    border-bottom: 2px solid var(--trait);
+  }
+
+  .pied {
+    margin-top: 44px;
+    padding-top: 20px;
+    border-top: 1px solid var(--trait);
+    font-family: var(--titre);
+    font-size: 13.5px;
+    color: var(--encre-douce);
+  }
+  .pied p { margin-bottom: 8px; }
+</style>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+</head>
+<body>
+<article class="feuille">
+
+  <header class="entete">
+    <p class="eyebrow">ShortFactory</p>
+    <h1>Politique de confidentialité</h1>
+    <p class="meta">Version 1.0 — 8 octobre 2026</p>
+  </header>
+
+  <div class="resume">
+    <p>
+      <strong>En résumé :</strong> ShortFactory ne collecte aucune donnée.
+      L'application s'exécute sur l'ordinateur de l'utilisateur, l'éditeur
+      n'exploite aucun serveur, et aucune information n'est transmise à
+      l'éditeur ni à un tiers à des fins commerciales.
+    </p>
+  </div>
+
+  <h2><span class="num">1</span>Aucune collecte par l'éditeur</h2>
+  <p>
+    ShortFactory est une application locale. Elle ne comporte ni télémétrie, ni
+    analytique, ni rapport d'erreur automatique, ni compte utilisateur. L'éditeur
+    n'exploite aucune base de données et ne reçoit aucune information concernant
+    l'utilisateur, son matériel ou son usage de l'application.
+  </p>
+
+  <h2><span class="num">2</span>Données conservées sur l'ordinateur</h2>
+  <p>
+    L'application écrit plusieurs fichiers dans son propre dossier, sur le disque
+    de l'utilisateur et nulle part ailleurs.
+  </p>
+
+  <div class="tableau">
+    <table>
+      <thead>
+        <tr><th>Fichier</th><th>Contenu</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>donnees/reglages.json</code></td>
+          <td>Préférences de l'utilisateur et jetons d'accès TikTok</td>
+        </tr>
+        <tr>
+          <td><code>donnees/journal.jsonl</code></td>
+          <td>Historique des vidéos produites : titre, durée, date</td>
+        </tr>
+        <tr>
+          <td><code>videos/</code></td>
+          <td>Vidéos générées et fichiers intermédiaires</td>
+        </tr>
+        <tr>
+          <td><code>outils/</code></td>
+          <td>Composant d'encodage vidéo téléchargé au premier lancement</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>
+    Ces fichiers restent accessibles à l'utilisateur, qui peut les consulter, les
+    sauvegarder ou les supprimer à tout moment. Supprimer le dossier de
+    l'application efface l'intégralité des données.
+  </p>
+
+  <h2><span class="num">3</span>Jetons d'accès TikTok</h2>
+  <p>
+    Lorsque l'utilisateur relie son compte TikTok, la plateforme délivre un jeton
+    d'accès et un jeton de rafraîchissement. Ces jetons sont enregistrés
+    <strong>exclusivement dans le fichier de réglages local</strong> et servent
+    uniquement à transmettre les vidéos au compte de l'utilisateur.
+  </p>
+  <p>
+    Ils ne sont transmis qu'aux serveurs officiels de TikTok, sur des connexions
+    chiffrées. L'éditeur n'y a jamais accès.
+  </p>
+  <p>
+    L'utilisateur peut révoquer cette autorisation à tout moment, depuis les
+    réglages de sécurité de son compte TikTok ou en cliquant sur
+    <code>Délier</code> dans l'application, ce qui efface les jetons du disque.
+  </p>
+
+  <h2><span class="num">4</span>Données transmises à TikTok</h2>
+  <p>Lors d'une publication, l'application transmet à TikTok :</p>
+  <ul>
+    <li>le fichier vidéo généré ;</li>
+    <li>le titre et les mots-clés associés ;</li>
+    <li>le niveau de confidentialité choisi par l'utilisateur.</li>
+  </ul>
+  <p>
+    L'application consulte également les informations de base du compte afin de
+    vérifier les options de publication autorisées. Ces échanges sont régis par
+    la politique de confidentialité de TikTok.
+  </p>
+
+  <h2><span class="num">5</span>Services de génération</h2>
+  <p>
+    Pour produire la narration et les arrière-plans, l'application adresse à des
+    services tiers le texte à prononcer et les descriptions d'images à générer.
+    Ces requêtes ne contiennent aucune donnée personnelle : ni identité, ni
+    identifiant de compte, ni adresse, ni contenu propre à l'utilisateur.
+  </p>
+  <p>
+    L'utilisateur peut supprimer entièrement l'appel au service d'images en
+    choisissant le mode d'arrière-plans calculés localement.
+  </p>
+
+  <h2><span class="num">6</span>Réseau local</h2>
+  <p>
+    L'interface de l'application est servie par un composant interne qui écoute
+    uniquement sur l'adresse de bouclage <code>127.0.0.1</code>. Elle n'est
+    accessible ni depuis le réseau local, ni depuis Internet.
+  </p>
+
+  <h2><span class="num">7</span>Mineurs</h2>
+  <p>
+    L'application n'est pas destinée aux personnes n'ayant pas l'âge minimal requis
+    par les conditions d'utilisation de TikTok et de son programme développeur.
+  </p>
+
+  <h2><span class="num">8</span>Modification</h2>
+  <p>
+    Cette politique peut être mise à jour. La version en vigueur est celle
+    publiée à cette adresse, datée en tête de document.
+  </p>
+
+  <div class="pied">
+    <p>Pour toute question relative à cette politique, contacter l'éditeur de
+       l'application via le compte développeur TikTok associé.</p>
+    <p>Voir également les <a href="conditions.html">conditions d'utilisation</a>.</p>
+  </div>
+
+</article>
+</body>
+</html>
