@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autorisation ShortFactory</title>
+<style>
+  :root {
+    --fond: #fbfaf8; --papier: #fff; --encre: #1c1f24; --doux: #5b626d;
+    --trait: #e2e0da; --accent: #3c5a7a; --surligne: #f3f1ea;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --fond:#131519; --papier:#181b20; --encre:#e8e6e1; --doux:#9aa0ab;
+            --trait:#2a2e35; --accent:#8fb3d9; --surligne:#1f232a; color-scheme: dark; }
+  }
+  body {
+    background: var(--fond); color: var(--encre); margin: 0; padding: 0 20px;
+    font: 17px/1.6 "IBM Plex Sans", system-ui, sans-serif;
+    min-height: 100vh; display: flex; align-items: center; justify-content: center;
+  }
+  .carte {
+    background: var(--papier); border: 1px solid var(--trait); border-radius: 6px;
+    padding: 36px 32px; max-width: 34rem; width: 100%;
+  }
+  h1 { font-size: 22px; font-weight: 600; margin: 0 0 8px; }
+  p { margin: 0 0 18px; color: var(--doux); font-size: 16px; }
+  .code {
+    font-family: ui-monospace, Consolas, monospace; font-size: 14px;
+    background: var(--surligne); border: 1px solid var(--trait); border-radius: 5px;
+    padding: 14px; word-break: break-all; user-select: all; margin-bottom: 14px;
+  }
+  button {
+    font: inherit; font-size: 15px; font-weight: 550; cursor: pointer;
+    padding: 11px 20px; border-radius: 6px; border: none;
+    background: var(--accent); color: #fff;
+  }
+  .erreur { color: #c0392b; }
+  #etat { font-size: 14px; color: var(--doux); min-height: 20px; margin-top: 10px; }
+</style>
+</head>
+<body>
+<div class="carte">
+  <h1 id="titre">Autorisation reçue</h1>
+  <p id="intro">Copie ce code et colle-le dans ShortFactory, puis clique sur « Relier le compte ».</p>
+  <div class="code" id="code">…</div>
+  <button id="copier">Copier le code</button>
+  <div id="etat"></div>
+</div>
+<script>
+  const params = new URLSearchParams(location.search);
+  const code = params.get("code");
+  const erreur = params.get("error");
+  const boite = document.getElementById("code");
+
+  if (code) {
+    boite.textContent = code;
+  } else if (erreur) {
+    document.getElementById("titre").textContent = "Autorisation refusée";
+    document.getElementById("titre").className = "erreur";
+    document.getElementById("intro").textContent = "TikTok a renvoyé une erreur :";
+    boite.textContent = erreur + (params.get("error_description") ? " — " + params.get("error_description") : "");
+    document.getElementById("copier").hidden = true;
+  } else {
+    document.getElementById("titre").textContent = "Page d'autorisation";
+    document.getElementById("intro").textContent =
+      "Cette page reçoit le code d'autorisation TikTok. Ouvre-la depuis ShortFactory.";
+    boite.hidden = true;
+    document.getElementById("copier").hidden = true;
+  }
+
+  document.getElementById("copier").addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(code);
+      document.getElementById("etat").textContent = "Code copié.";
+    } catch {
+      const s = getSelection(); const r = document.createRange();
+      r.selectNodeContents(boite); s.removeAllRanges(); s.addRange(r);
+      document.getElementById("etat").textContent = "Code sélectionné — fais Ctrl+C.";
+    }
+  });
+</script>
+</body>
+</html>
